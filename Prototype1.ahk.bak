@@ -9,7 +9,9 @@ Gui, add, text, gAutorun,---Welcome to the bot making utility!---
 Gui, add, pic, gPixel vTrueFalse,image.png
 Gui, add, pic, y25 x30 gPixel2 vTrueFalse2,image.png
 
+
 State = 1
+State2 = 1
 
 Autorun:
 	return
@@ -26,3 +28,14 @@ Pixel:
 	
 	return
 	
+Pixel2:
+	if(State2 == 1){
+		GuiControl, ,TrueFalse2,image2.png
+		State2 = 0
+	}
+	else{
+		GuiControl, ,TrueFalse2,image.png	
+		State2 = 1
+	}
+	
+	return
